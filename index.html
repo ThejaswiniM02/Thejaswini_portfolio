@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thejaswini M | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap');
+        
+        *{box-sizing:border-box;margin:0;padding:0}
+        :root{
+            --bg:#f5f4f0;
+            --card:#ffffff;
+            --card2:#eef2ff;
+            --card3:#f0fdf9;
+            --card4:#fdf4ff;
+            --text:#1a1a2e;
+            --muted:#6b7280;
+            --lav:#7c6fcd;
+            --teal:#2dd4bf;
+            --blue:#60a5fa;
+            --border:#e2e8f0;
+            --tag-bg:#ede9fe;
+            --tag-text:#5b4fcf;
+        }
+        body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+        nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2rem;background:rgba(245,244,240,0.95);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border)}
+        .nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:500;color:var(--text)}
+        .nav-links{display:flex;gap:1.5rem}
+        .nav-links a{font-size:0.85rem;color:var(--muted);text-decoration:none;transition:color 0.2s}
+        .nav-links a:hover{color:var(--lav)}
+        .container{max-width:1000px;margin:0 auto;padding:2rem 1.5rem}
+        .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+        .card{background:var(--card);border-radius:18px;border:1px solid var(--border);padding:1.5rem;transition:transform 0.2s,box-shadow 0.2s}
+        .card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,111,205,0.1)}
+        .card.lav{background:var(--card2)}
+        .card.teal{background:var(--card3)}
+        .card.purple{background:var(--card4)}
+        .span6{grid-column:span 6}
+        .span4{grid-column:span 4}
+        .span2{grid-column:span 2}
+        .span3{grid-column:span 3}
+        .hero-card{grid-column:span 4;min-height:200px;display:flex;flex-direction:column;justify-content:space-between}
+        .avatar-card{grid-column:span 2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#ede9fe,#e0f2fe);border:none}
+        .avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--lav),var(--teal));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:0.75rem}
+        .name-big{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:500;line-height:1.1;color:var(--text);margin-bottom:0.5rem}
+        .tagline{font-size:0.9rem;color:var(--muted);line-height:1.5;margin-bottom:1rem}
+        .pill-row{display:flex;flex-wrap:wrap;gap:6px}
+        .pill{background:var(--tag-bg);color:var(--tag-text);font-size:0.72rem;padding:4px 10px;border-radius:20px;font-weight:500}
+        .pill.teal-pill{background:#ccfbf1;color:#0f766e}
+        .pill.blue-pill{background:#dbeafe;color:#1d4ed8}
+        .section-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.75rem;font-weight:500}
+        .section-title{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--text);margin-bottom:1.5rem}
+        h3{font-size:1rem;font-weight:500;margin-bottom:0.4rem}
+        p{font-size:0.875rem;color:var(--muted);line-height:1.6}
+        .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:0.5rem}
+        .skill-group{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:0.9rem}
+        .skill-group-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--lav);font-weight:500;margin-bottom:0.5rem}
+        .skill-tags{display:flex;flex-wrap:wrap;gap:4px}
+        .skill-tag{font-size:0.72rem;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:8px}
+        .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:0.5rem}
+        .proj-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.25rem;transition:transform 0.2s,box-shadow 0.2s}
+        .proj-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+        .proj-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;font-size:1.1rem}
+        .proj-icon.lav{background:#ede9fe}
+        .proj-icon.teal{background:#ccfbf1}
+        .proj-icon.blue{background:#dbeafe}
+        .proj-title{font-size:0.95rem;font-weight:500;color:var(--text);margin-bottom:0.3rem}
+        .proj-desc{font-size:0.8rem;color:var(--muted);line-height:1.5;margin-bottom:0.75rem}
+        .proj-link{font-size:0.78rem;color:var(--lav);text-decoration:none;display:inline-flex;align-items:center;gap:4px;font-weight:500}
+        .proj-link:hover{text-decoration:underline}
+        .contact-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:0.5rem}
+        .contact-btn{display:inline-flex;align-items:center;gap:8px;padding:0.6rem 1.2rem;border-radius:30px;font-size:0.85rem;font-weight:500;text-decoration:none;transition:all 0.2s;border:1.5px solid var(--border)}
+        .contact-btn.primary{background:var(--lav);color:white;border-color:var(--lav)}
+        .contact-btn.primary:hover{background:#6b5fba}
+        .contact-btn.ghost{background:white;color:var(--text)}
+        .contact-btn.ghost:hover{background:var(--tag-bg);border-color:var(--lav);color:var(--lav)}
+        .divider{grid-column:span 6;height:1px;background:var(--border);margin:0.5rem 0}
+        footer{text-align:center;padding:2rem;font-size:0.8rem;color:var(--muted)}
+        
+        @media(max-width:640px){
+            .hero-card,.avatar-card,.span4,.span2,.span3{grid-column:span 6}
+            .bento{gap:10px}
+            .name-big{font-size:1.6rem}
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">TM</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="bento">
+
+    <div class="card hero-card" id="about">
+      <div>
+        <div class="section-label">Available 2026</div>
+        <div class="name-big">Thejaswini M</div>
+        <p class="tagline">Engineer by degree, Developer &amp; AI Enthusiast by passion</p>
+      </div>
+      <div class="pill-row">
+        <span class="pill">SWE</span>
+        <span class="pill teal-pill">AI / ML</span>
+        <span class="pill blue-pill">Open to work</span>
+      </div>
+    </div>
+
+    <div class="card avatar-card">
+      <div class="avatar">TM</div>
+      <p style="font-size:0.82rem;color:var(--muted);line-height:1.5">B.E. Engineering<br>Bangalore, India</p>
+    </div>
+
+    <div class="card lav span3">
+      <div class="section-label">About me</div>
+      <h3 style="margin-bottom:0.5rem">Building at the intersection of software &amp; intelligence</h3>
+      <p>Final year engineering student with hands-on experience in full stack development and AI/ML. I love turning ideas into real, working products — from Chrome extensions for web accessibility to disease detection systems.</p>
+    </div>
+
+    <div class="card teal span3">
+      <div class="section-label">Currently</div>
+      <h3 style="margin-bottom:0.5rem">Looking for internships</h3>
+      <p>Actively seeking full stack or SWE internship roles where I can contribute meaningfully from day one. Comfortable with Python, JavaScript, React, and machine learning pipelines.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="card span6" id="skills">
+      <div class="section-label">What I work with</div>
+      <div class="section-title">Skills</div>
+      <div class="skill-grid">
+        <div class="skill-group">
+          <div class="skill-group-label">Programming</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">AI / ML</div>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">scikit-learn</span>
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Whisper WASM</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Backend</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Frontend</div>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Databases</div>
+          <div class="skill-tags">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Power BI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="card span6" id="projects">
+      <div class="section-label">What I've built</div>
+      <div class="section-title">Projects</div>
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="proj-icon teal"><i class="ti ti-eye" aria-hidden="true" style="color:#0f766e;font-size:18px"></i></div>
+          <div class="proj-title">VisionForAll</div>
+          <div class="proj-desc">Real-time color detection and color blindness simulation Chrome extension for web accessibility. Final year project built with Python and OpenCV.</div>
+          <div class="pill-row" style="margin-bottom:0.75rem">
+            <span class="pill teal-pill">Python</span>
+            <span class="pill teal-pill">OpenCV</span>
+            <span class="pill">Chrome Extension</span>
+          </div>
+          <a class="proj-link" href="https://github.com/ThejaswiniM02/VisionForAll" target="_blank">View on GitHub <i class="ti ti-arrow-right" style="font-size:12px"></i></a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-icon lav"><i class="ti ti-stethoscope" aria-hidden="true" style="color:#5b4fcf;font-size:18px"></i></div>
+          <div class="proj-title">Disease Detector</div>
+          <div class="proj-desc">A JavaScript-based disease detection system that analyses symptoms and predicts possible conditions using ML techniques.</div>
+          <div class="pill-row" style="margin-bottom:0.75rem">
+            <span class="pill">JavaScript</span>
+            <span class="pill teal-pill">ML</span>
+          </div>
+          <a class="proj-link" href="https://github.com/ThejaswiniM02/Disease_Detector" target="_blank">View on GitHub <i class="ti ti-arrow-right" style="font-size:12px"></i></a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-icon blue"><i class="ti ti-code" aria-hidden="true" style="color:#1d4ed8;font-size:18px"></i></div>
+          <div class="proj-title">More on GitHub</div>
+          <div class="proj-desc">13+ repositories spanning full stack, AI/ML, and tooling projects. Explore the full breadth of work on GitHub.</div>
+          <div class="pill-row" style="margin-bottom:0.75rem">
+            <span class="pill blue-pill">13 repos</span>
+          </div>
+          <a class="proj-link" href="https://github.com/ThejaswiniM02" target="_blank">github.com/ThejaswiniM02 <i class="ti ti-arrow-right" style="font-size:12px"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="card span6" id="contact">
+      <div class="section-label">Get in touch</div>
+      <div class="section-title">Contact</div>
+      <p style="margin-bottom:1rem;max-width:480px">Open to internship opportunities, collaborations, and interesting projects. Feel free to reach out!</p>
+      <div class="contact-row">
+        <a class="contact-btn primary" href="mailto:thejaswinim029@gmailcom"><i class="ti ti-mail" aria-hidden="true"></i> Email me</a>
+        <a class="contact-btn ghost" href="https://github.com/ThejaswiniM02" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i> GitHub</a>
+        <a class="contact-btn ghost" href="https://www.linkedin.com/in/thejaswini-m" target="_blank"><i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>Thejaswini M • Built with Vite + Vercel</footer>
+
+</body>
+</html>
