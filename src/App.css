@@ -55,7 +55,18 @@
       scale(0.8);
   }
 }
+.avatar-card {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
 
+.avatar-card img {
+    transition: transform 0.3s ease;
+}
+
+.avatar-card:hover img {
+    transform: scale(1.05);
+}
 #center {
   display: flex;
   flex-direction: column;
