@@ -26,7 +26,6 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors ${darkMode ? 'dark bg-[#0a0a0f] text-white' : 'bg-[#f8f5f0] text-[#1a1a1a]'}`}>
-
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 border-b ${darkMode ? 'bg-[#0a0a0f]/95 border-gray-800' : 'bg-[#f8f5f0]/95 border-[#e5e0d8]'}`}>
         <div className="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
