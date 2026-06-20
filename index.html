@@ -44,6 +44,9 @@
         .hero-card{grid-column:span 4;min-height:200px;display:flex;flex-direction:column;justify-content:space-between}
         .avatar-card{grid-column:span 2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#ede9fe,#e0f2fe);border:none}
         .avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--lav),var(--teal));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:0.75rem}
+        .avatar img {
+  border-radius: 20px !important;
+}
         .name-big{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:500;line-height:1.1;color:var(--text);margin-bottom:0.5rem}
         .tagline{font-size:0.9rem;color:var(--muted);line-height:1.5;margin-bottom:1rem}
         .pill-row{display:flex;flex-wrap:wrap;gap:6px}
@@ -114,9 +117,11 @@
       </div>
     </div>
 
-    <div class="card avatar-card">
-  <div class="avatar">TM</div>
-  <p style="font-size:0.82rem;color:var(--muted);line-height:1.5">B.E. Engineering<br>Bangalore, India</p>
+    <div class="avatar-card">
+  <div class="avatar">
+    <img src="/Tej_photo.JPG" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+  </div>
+  <p style="font-size:0.82rem;color:var(--muted);line-height:1.5;margin-top:0.5rem">B.E. Engineering<br>Bangalore, India</p>
 </div>
     <div class="card lav span3">
       <div class="section-label">About me</div>
@@ -218,15 +223,26 @@
             <span class="pill">JavaScript</span>
             <span class="pill teal-pill">ML</span>
           </div>
-          <a class="proj-link" href="https://github.com/ThejaswiniM02/Disease_Detector" target="_blank">View on GitHub <i class="ti ti-arrow-right" style="font-size:12px"></i></a>
+          <a class="proj-link" href="https://github.com/ThejaswiniM02/healthcare_navigator" target="_blank">View on GitHub <i class="ti ti-arrow-right" style="font-size:12px"></i></a>
         </div>
 
         <div class="proj-card">
+  <div class="proj-icon blue"><i class="ti ti-brain" aria-hidden="true" style="color:#1d4ed8;font-size:18px"></i></div>
+  <div class="proj-title">ARIA</div>
+  <div class="proj-desc">A multi-agent research assistant built with FastAPI and LangGraph, using ChromaDB for vector storage and Gemini for reasoning.</div>
+  <div class="pill-row" style="margin-bottom:0.75rem">
+    <span class="pill">FastAPI</span>
+    <span class="pill teal-pill">LangGraph</span>
+    <span class="pill">ChromaDB</span>
+  </div>
+  <a class="proj-link" href="https://github.com/ThejaswiniM02/ARIA" target="_blank">View on GitHub <i class="ti ti-arrow-right" style="font-size:12px"></i></a>
+</div>
+        <div class="proj-card">
           <div class="proj-icon blue"><i class="ti ti-code" aria-hidden="true" style="color:#1d4ed8;font-size:18px"></i></div>
           <div class="proj-title">More on GitHub</div>
-          <div class="proj-desc">13+ repositories spanning full stack, AI/ML, and tooling projects. Explore the full breadth of work on GitHub.</div>
+          <div class="proj-desc">20+ repositories spanning full stack, AI/ML, and tooling projects. Explore the full breadth of work on GitHub.</div>
           <div class="pill-row" style="margin-bottom:0.75rem">
-            <span class="pill blue-pill">13 repos</span>
+            <span class="pill blue-pill">22 repos</span>
           </div>
           <a class="proj-link" href="https://github.com/ThejaswiniM02" target="_blank">github.com/ThejaswiniM02 <i class="ti ti-arrow-right" style="font-size:12px"></i></a>
         </div>
@@ -241,7 +257,7 @@
       <div class="section-title">Contact</div>
       <p style="margin-bottom:1rem;max-width:480px">Open to internship opportunities, collaborations, and interesting projects. Feel free to reach out!</p>
       <div class="contact-row">
-        <a class="contact-btn primary" href="mailto:thejaswinim029@gmailcom"><i class="ti ti-mail" aria-hidden="true"></i> Email me</a>
+        <a class="contact-btn primary" href="mailto:thejaswinim029@gmail.com"><i class="ti ti-mail" aria-hidden="true"></i> Email me</a>
         <a class="contact-btn ghost" href="https://github.com/ThejaswiniM02" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i> GitHub</a>
         <a class="contact-btn ghost" href="https://www.linkedin.com/in/thejaswini-m" target="_blank"><i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn</a>
       </div>

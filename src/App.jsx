@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors ${darkMode ? 'dark bg-[#0a0a0f] text-white' : 'bg-[#f8f5f0] text-[#1a1a1a]'}`}>
-      
+
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 border-b ${darkMode ? 'bg-[#0a0a0f]/95 border-gray-800' : 'bg-[#f8f5f0]/95 border-[#e5e0d8]'}`}>
         <div className="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
@@ -38,8 +38,8 @@ function App() {
               <a href="#projects" className="hover:text-[#7c3aed] transition-colors">Projects</a>
               <a href="#contact" className="hover:text-[#7c3aed] transition-colors">Contact</a>
             </div>
-            <button 
-              onClick={() => setDarkMode(!darkMode)} 
+            <button
+              onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
@@ -74,7 +74,7 @@ function App() {
               <a href="#contact" className="bg-[#7c3aed] hover:bg-[#6d28d9] text-white px-8 py-4 rounded-2xl flex items-center gap-3 font-medium">
                 <Mail size={20} /> Get in touch
               </a>
-              <a href="https://github.com/ThejaswiniM02" target="_blank" className="border-2 border-black dark:border-white hover:bg-black hover:text-white px-8 py-4 rounded-2xl flex items-center gap-3 font-medium">
+              <a href="https://github.com/ThejaswiniM02" target="_blank" rel="noreferrer" className="border-2 border-black dark:border-white hover:bg-black hover:text-white px-8 py-4 rounded-2xl flex items-center gap-3 font-medium">
                 <Github size={20} /> GitHub
               </a>
             </div>
@@ -84,9 +84,11 @@ function App() {
           <div className="flex justify-center md:justify-end">
             <div className="relative w-80 h-80 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-gradient-to-br from-[#7c6fcd] via-[#2dd4bf] to-[#60a5fa] rounded-full flex items-center justify-center shadow-2xl">
-                <div className="w-[280px] h-[280px] md:w-[340px] md:h-[340px] bg-white dark:bg-gray-900 rounded-full flex items-center justify-center text-8xl font-serif shadow-inner">
-                  TM
-                </div>
+                <img
+                  src="/Tej_photo.JPG"
+                  alt="Thejaswini M"
+                  className="w-[280px] h-[280px] md:w-[340px] md:h-[340px] rounded-full object-cover shadow-inner"
+                />
               </div>
             </div>
           </div>
@@ -113,36 +115,36 @@ function App() {
       </section>
 
       {/* Skills */}
-<section id="skills" className="py-24">
-  <div className="max-w-6xl mx-auto px-6">
-    <div className="text-center mb-16">
-      <div className="uppercase tracking-widest text-sm text-[#6b5f5a] dark:text-gray-400">ARSENAL</div>
-      <h2 className="text-5xl font-serif mt-3">Skills</h2>
-    </div>
+      <section id="skills" className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="uppercase tracking-widest text-sm text-[#6b5f5a] dark:text-gray-400">ARSENAL</div>
+            <h2 className="text-5xl font-serif mt-3">Skills</h2>
+          </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {[
-        { title: "Programming", skills: ["Python", "Java", "JavaScript", "TypeScript"] },
-        { title: "AI & ML", skills: ["OpenCV", "scikit-learn", "NLP", "Deep Learning", "Whisper WASM"] },
-        { title: "Backend", skills: ["Spring Boot", "Node.js", "Express.js"] },
-        { title: "Frontend", skills: ["React", "Vite", "Tailwind CSS"] },
-        { title: "Databases", skills: ["MongoDB", "MySQL"] },
-        { title: "Tools", skills: ["Git", "Docker", "Postman", "Tableau", "Power BI"] }
-      ].map((group, i) => (
-        <div key={i} className="bg-white dark:bg-gray-900 border border-[#e5e0d8] dark:border-gray-700 rounded-3xl p-8 hover:-translate-y-1 transition-all">
-          <div className="text-[#7c3aed] uppercase text-xs tracking-widest mb-6 font-medium">{group.title}</div>
-          <div className="flex flex-wrap gap-3">
-            {group.skills.map(skill => (
-              <span key={skill} className="bg-[#f8f5f0] dark:bg-gray-800 px-5 py-2.5 rounded-2xl text-sm font-medium">
-                {skill}
-              </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Programming", skills: ["Python", "Java", "JavaScript", "TypeScript"] },
+              { title: "AI & ML", skills: ["OpenCV", "scikit-learn", "NLP", "Deep Learning", "Whisper WASM"] },
+              { title: "Backend", skills: ["Spring Boot", "Node.js", "Express.js"] },
+              { title: "Frontend", skills: ["React", "Vite", "Tailwind CSS"] },
+              { title: "Databases", skills: ["MongoDB", "MySQL"] },
+              { title: "Tools", skills: ["Git", "Docker", "Postman", "Tableau", "Power BI"] }
+            ].map((group, i) => (
+              <div key={i} className="bg-white dark:bg-gray-900 border border-[#e5e0d8] dark:border-gray-700 rounded-3xl p-8 hover:-translate-y-1 transition-all">
+                <div className="text-[#7c3aed] uppercase text-xs tracking-widest mb-6 font-medium">{group.title}</div>
+                <div className="flex flex-wrap gap-3">
+                  {group.skills.map(skill => (
+                    <span key={skill} className="bg-[#f8f5f0] dark:bg-gray-800 px-5 py-2.5 rounded-2xl text-sm font-medium">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Projects */}
       <section id="projects" className="py-24 bg-white dark:bg-gray-900 border-t border-b border-[#e5e0d8] dark:border-gray-800">
@@ -157,7 +159,7 @@ function App() {
               <div className="text-4xl mb-6">👁️</div>
               <h3 className="text-2xl font-medium mb-2">VisionForAll</h3>
               <p className="text-[#6b5f5a] dark:text-gray-400">Real-time color detection &amp; accessibility Chrome extension (Python + OpenCV)</p>
-              <a href="https://github.com/ThejaswiniM02/VisionForAll" target="_blank" className="mt-6 inline-flex items-center gap-2 text-[#7c3aed] hover:underline">
+              <a href="https://github.com/ThejaswiniM02/VisionForAll" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-[#7c3aed] hover:underline">
                 View on GitHub <ArrowRight size={16} />
               </a>
             </div>
@@ -166,7 +168,16 @@ function App() {
               <div className="text-4xl mb-6">🩺</div>
               <h3 className="text-2xl font-medium mb-2">Disease Detector</h3>
               <p className="text-[#6b5f5a] dark:text-gray-400">Symptom-based disease prediction using JavaScript &amp; ML</p>
-              <a href="https://github.com/ThejaswiniM02/Disease_Detector" target="_blank" className="mt-6 inline-flex items-center gap-2 text-[#7c3aed] hover:underline">
+              <a href="https://github.com/ThejaswiniM02/healthcare_navigator" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-[#7c3aed] hover:underline">
+                View on GitHub <ArrowRight size={16} />
+              </a>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 border border-[#e5e0d8] dark:border-gray-700 rounded-3xl p-8 group">
+              <div className="text-4xl mb-6">🧠</div>
+              <h3 className="text-2xl font-medium mb-2">ARIA</h3>
+              <p className="text-[#6b5f5a] dark:text-gray-400">Multi-agent research assistant (FastAPI + LangGraph + ChromaDB + Gemini)</p>
+              <a href="https://github.com/ThejaswiniM02/ARIA" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-[#7c3aed] hover:underline">
                 View on GitHub <ArrowRight size={16} />
               </a>
             </div>
@@ -175,7 +186,7 @@ function App() {
               <div className="text-4xl mb-6">📚</div>
               <h3 className="text-2xl font-medium mb-2">+11 More Projects</h3>
               <p className="text-gray-400 flex-1">Full-stack, automation, and AI experiments</p>
-              <a href="https://github.com/ThejaswiniM02" target="_blank" className="text-[#c4b5fd] inline-flex items-center gap-2 mt-auto">
+              <a href="https://github.com/ThejaswiniM02" target="_blank" rel="noreferrer" className="text-[#c4b5fd] inline-flex items-center gap-2 mt-auto">
                 Browse all repositories <ArrowRight size={16} />
               </a>
             </div>
@@ -190,15 +201,15 @@ function App() {
           <p className="mt-6 text-xl text-gray-400">Open to SWE and AI/ML internship opportunities in 2026</p>
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:thejaswinim029@gmail.com" 
+            <a href="mailto:thejaswinim029@gmail.com"
                className="bg-white text-black px-10 py-5 rounded-2xl font-medium flex items-center justify-center gap-3 hover:bg-gray-100">
               <Mail size={22} /> Email Me
             </a>
-            <a href="https://github.com/ThejaswiniM02" target="_blank"
+            <a href="https://github.com/ThejaswiniM02" target="_blank" rel="noreferrer"
                className="border border-gray-600 hover:border-white px-10 py-5 rounded-2xl font-medium flex items-center justify-center gap-3">
               <Github size={22} /> GitHub
             </a>
-            <a href="https://linkedin.com/in/thejaswini-m" target="_blank"
+            <a href="https://linkedin.com/in/thejaswini-m" target="_blank" rel="noreferrer"
                className="border border-gray-600 hover:border-white px-10 py-5 rounded-2xl font-medium flex items-center justify-center gap-3">
               <Linkedin size={22} /> LinkedIn
             </a>
