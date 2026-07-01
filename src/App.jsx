@@ -76,6 +76,7 @@ function App() {
               <a href="https://github.com/ThejaswiniM02" target="_blank" rel="noreferrer" className="border-2 border-black dark:border-white hover:bg-black hover:text-white px-8 py-4 rounded-2xl flex items-center gap-3 font-medium">
                 <Github size={20} /> GitHub
               </a>
+              
             </div>
           </div>
 
@@ -212,6 +213,9 @@ function App() {
                className="border border-gray-600 hover:border-white px-10 py-5 rounded-2xl font-medium flex items-center justify-center gap-3">
               <Linkedin size={22} /> LinkedIn
             </a>
+            <a href="/ThejaswiniM_resume.pdf" download target="_blank" rel="noopener noreferrer">
+                Resume
+             </a>
           </div>
         </div>
       </section>
